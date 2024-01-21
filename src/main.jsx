@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from './ErrorPage.jsx';
 import App from './App.jsx'
-import Shopping from './Shopping.jsx'
+import Shopping from './Shopping.jsx';
 
 const router = createBrowserRouter([
   {
