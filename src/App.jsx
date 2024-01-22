@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
+import NavBar from './Navbar'
 
 function App() {
   /*
@@ -20,13 +21,7 @@ function App() {
   return (
     <>
       <div>
-        <nav>    
-          <ul>
-            <li>
-              <Link to="shopping">Shopping page</Link>
-            </li>
-          </ul>
-        </nav>
+      <NavBar />
         <p>HomePage</p>
       </div>
     </>

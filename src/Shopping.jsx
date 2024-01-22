@@ -1,13 +1,12 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+import NavBar from "./Navbar";
 const Shopping = () =>
 {
     return(
         <div>
-            <ShoppingCartIcon />
-            <Typography variant='h1'>Hello, World!</Typography>
+            <NavBar />
+            <Typography variant='h1'>Shopping Page</Typography>
         </div>
     )
 }

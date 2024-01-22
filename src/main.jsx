@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from './ErrorPage.jsx';
 import App from './App.jsx'
 import Shopping from './Shopping.jsx';
+import NavBar from './Navbar.jsx';
 
 const router = createBrowserRouter([
   {

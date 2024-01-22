@@ -1,0 +1,16 @@
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#home{
+    display: flex;
+    gap: 5px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
