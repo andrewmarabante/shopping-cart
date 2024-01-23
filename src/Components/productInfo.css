@@ -1,3 +1,27 @@
 .productImage{
-    height: 250px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.imgCont{
+    justify-content: center;
+}
+
+.description{
+    max-height: 150px;
+    overflow: scroll;
+}
+
+.title{
+    max-height: 80px;
+    overflow: scroll;
 }

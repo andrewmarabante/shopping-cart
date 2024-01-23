@@ -18,7 +18,7 @@ const NavBar = () =>
                 </div>
             </Link>
 
-            <Link to='./shopping'>
+            <Link to='/shopping'>
                 <Typography id='Shopping' variant='subtitle1'>Shopping</Typography>
             </Link>
             <Typography variant='subtitle1'>Profile</Typography>
