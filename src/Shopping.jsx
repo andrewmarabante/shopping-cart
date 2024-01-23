@@ -8,6 +8,7 @@ import { Grid } from "@mui/material";
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import {Button} from "@mui/material";
+import cart from "./Navbar"
 
 const Shopping = () =>
 {
@@ -22,7 +23,6 @@ const Shopping = () =>
     const data = await (await (await fetch('https://fakestoreapi.com/products')).json());
             setProducts(data);
   }
-  console.log(products)
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -31,6 +31,16 @@ const Shopping = () =>
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
+
+  const addCart = (e) =>
+  {
+    if(
+      window.cart.includes(e)
+    ){
+      return
+    }
+    window.cart.push(e)
+  }
 
     return(
         <div>
@@ -41,12 +51,12 @@ const Shopping = () =>
                     products.map( (item) =>
                     {
                         return(
-                            <Grid item xs={3}>
+                            <Grid key={v4()} item xs={3}>
                                 <Item style={{height:'500px', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-                                    <GetInfo key={v4()} item={item}/>
+                                    <GetInfo item={item}/>
                                     <div className="priceAdd" style={{height:'100%', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
                                         <Typography>${item.price}</Typography>
-                                        <Button>Add To Cart</Button>
+                                        <Button onClick={()=>addCart(item)}>Add To Cart</Button>
                                     </div>
                                 </Item>
                             </Grid>

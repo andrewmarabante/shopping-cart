@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from './ErrorPage.jsx';
 import App from './App.jsx'
 import Shopping from './Shopping.jsx';
-import NavBar from './Navbar.jsx';
+import Cart from './Cart.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "shopping",
     element: <Shopping />,
+  },
+  {
+    path: "cart",
+    element: <Cart />,
   },
 ]);
 

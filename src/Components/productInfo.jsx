@@ -5,7 +5,6 @@ import { Typography } from "@mui/material";
 import {Button} from "@mui/material";
 function GetInfo({item})
 {
-    console.log(item.title)
     return(
 
         <div className='container'>

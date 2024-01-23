@@ -6,7 +6,7 @@ import {Typography} from '@mui/material';
 import './NavBar.css'
 import { Link } from 'react-router-dom';
 
-
+window.cart = [];
 const NavBar = () =>
 {
     return(
@@ -22,7 +22,9 @@ const NavBar = () =>
                 <Typography id='Shopping' variant='subtitle1'>Shopping</Typography>
             </Link>
             <Typography variant='subtitle1'>Profile</Typography>
-            <ShoppingCartIcon />
+            <Link to='/cart'>
+                <ShoppingCartIcon />
+            </Link>
 
         </div>
     )
