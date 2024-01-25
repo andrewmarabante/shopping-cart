@@ -34,12 +34,7 @@ const Shopping = () =>
 
   const addCart = (e) =>
   {
-    if(
-      window.cart.includes(e)
-    ){
-      return
-    }
-    window.cart.push(e)
+    if(!window.cart.includes(e)){window.cart.push(e)}
   }
 
     return(
@@ -53,7 +48,7 @@ const Shopping = () =>
                         return(
                             <Grid key={v4()} item xs={3}>
                                 <Item style={{height:'500px', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
-                                    <GetInfo item={item}/>
+                                    <GetInfo item={item} cart={false}/>
                                     <div className="priceAdd" style={{height:'100%', display:'flex', flexDirection:'column', justifyContent:'flex-end'}}>
                                         <Typography>${item.price}</Typography>
                                         <Button onClick={()=>addCart(item)}>Add To Cart</Button>

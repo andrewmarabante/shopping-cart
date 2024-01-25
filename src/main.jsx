@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Shopping from './Shopping.jsx';
 import Cart from './Cart.jsx';
 
+window.cart = [];
 const router = createBrowserRouter([
   {
     path: "/",

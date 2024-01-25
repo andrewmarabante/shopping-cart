@@ -1,0 +1,19 @@
+#cartContainer{
+    border-bottom: solid 1px gray;
+    padding-bottom: 20px;
+}
+
+#total{
+    text-align: center;
+}
+
+#payButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#payButton{
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 10px;
+}

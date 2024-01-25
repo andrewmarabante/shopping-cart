@@ -5,8 +5,6 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {Typography} from '@mui/material';
 import './NavBar.css'
 import { Link } from 'react-router-dom';
-
-window.cart = [];
 const NavBar = () =>
 {
     return(
