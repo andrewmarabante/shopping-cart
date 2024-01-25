@@ -34,7 +34,7 @@ const Shopping = () =>
 
   const addCart = (e) =>
   {
-    if(!window.cart.includes(e)){window.cart.push(e)}
+    if(!window.cart.some(cartElement => cartElement.title === e.title)){window.cart.push(e)}
   }
 
     return(
