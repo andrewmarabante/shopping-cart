@@ -13,6 +13,7 @@ import cart from "./Navbar"
 const Shopping = () =>
 {
   const [products, setProducts] = useState([])
+  const [cartLength, setCartLength] = useState(window.cart.length);
   useEffect(
     () =>{
       getProducts();
@@ -35,11 +36,12 @@ const Shopping = () =>
   const addCart = (e) =>
   {
     if(!window.cart.some(cartElement => cartElement.title === e.title)){window.cart.push(e)}
+    setCartLength(window.cart.length)
   }
 
     return(
         <div>
-            <NavBar />
+            <NavBar cartLength={cartLength}/>
                 <div style={{margin:'75px'}}></div>
                 <Grid container rowSpacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     {

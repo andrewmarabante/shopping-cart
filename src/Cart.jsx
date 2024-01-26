@@ -11,6 +11,7 @@ import { useState } from "react";
 function Cart()
 {
     const [render, setRender] = useState('')
+    const [cartLength, setCartLength] = useState(window.cart.length);
     let total = 0;
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -43,12 +44,13 @@ function Cart()
     {
         subTotal(price)
         setRender(v4())
+        setCartLength(window.cart.length)
     }
 
 
     return(
         <div>
-                <NavBar />
+            <NavBar cartLength={cartLength}/>
                 {window.cart.length !==0 ? <div>
                     <div style={{margin:'75px'}}></div>
                     {
