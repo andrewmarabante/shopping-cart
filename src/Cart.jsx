@@ -6,11 +6,12 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import {Button} from "@mui/material";
 import './Cart.css'
+import { useState } from "react";
 
 function Cart()
 {
+    const [render, setRender] = useState('')
     let total = 0;
-    console.log(window.cart)
     const Item = styled(Paper)(({ theme }) => ({
         backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
         ...theme.typography.body2,
@@ -27,7 +28,6 @@ function Cart()
         {
         totalDisplay.innerHTML = 'Your Total Is: $'+total.toFixed(2)
         }
-        console.log(total)
     }
 
     function subTotal(change)
@@ -37,8 +37,14 @@ function Cart()
     if(totalDisplay !== null){
     totalDisplay.innerHTML = 'Your Total Is: $'+total.toFixed(2);
     }
-    console.log(total)
     }
+
+    function itemRemove(price)
+    {
+        subTotal(price)
+        setRender(v4())
+    }
+
 
     return(
         <div>
@@ -52,7 +58,7 @@ function Cart()
                                     return (
                                             <Grid key={v4()} item xs={3}>
                                                 <Item style={{height:'500px', display:'flex', justifyContent:'center'}}>
-                                                    <GetInfo item={item} cart={true} addTotal = {addTotal} subTotal={subTotal}/>
+                                                    <GetInfo item={item} cart={true} addTotal = {addTotal} subTotal={subTotal} itemRemove={itemRemove}/>
                                                 </Item>
                                             </Grid>
                                     )
