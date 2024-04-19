@@ -19,7 +19,7 @@ function App() {
                   day. 
         </Typography>
         <div id='picSec1'>
-          <img src="../public/images/clothing_pic.jpeg" alt="Pic of Guy" id='clothingPic'/>
+          <img src="/static/images/clothing_pic.jpeg" alt="Pic of Guy" id='clothingPic'/>
           <Typography id='picSecPara1' variant='subtitle1'>
             Check out this super dope picture of some customer at our local retail
             store. He looks so happy and vibrant because he sees the crazy deals we 
@@ -40,7 +40,7 @@ function App() {
             backs of dolphins is a very humane activity and should be seen as a safe practice
             which puts our company as a safe alternative to regular human made shirts.
           </Typography>
-          <img src="../public/images/dolphin_pic.jpeg" alt=""  id='dolphinPic'/>
+          <img src="/static/images/dolphin_pic.jpeg" alt=""  id='dolphinPic'/>
         </div>
       </div>
     </>
