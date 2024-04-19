@@ -40,7 +40,7 @@ const Shopping = () =>
   }
 
     return(
-        <div>
+        <div style={{paddingLeft:'30px', paddingRight:'30px'}}>
             <NavBar cartLength={cartLength}/>
                 <div style={{margin:'75px'}}></div>
                 <Grid container rowSpacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
